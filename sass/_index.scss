@@ -224,7 +224,19 @@ body {
                 }
                 .chef_right {
                     max-width: 330px;
-                    margin-top: 25px
+                    margin-top: 25px;
+                }
+            }
+        }
+        @media only screen and (min-width: 415px) and (max-width:767px) {
+            .chef_wrap {
+                img {
+                    width: 50%;
+                    //margin: auto;
+                }
+                .chef_right {
+                    width: 45%;
+                    margin: 25px 10px;
                 }
             }
         }
