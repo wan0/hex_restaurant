@@ -1,0 +1,40 @@
+$White: #EFE9E7;
+$Brown: #3D1101;
+$Orange: #F56C23;
+$Pink_Orange: #FF5E45;
+//rgba有的瀏覽器很像沒支援
+$Black_75: rgba(0,0,0,0.75);
+$Black_35: rgba(0,0,0,0.35);
+$font: MicrosoftJhengHeiRegular,微軟正黑體;
+$margin-bottom: 50px;
+$original_width: 1024px;
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+@mixin vertical-center($height) {
+	&:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: $height;
+    }
+}
+@mixin button($btn_color, $width:70px) {
+	width: $width;
+	height: 32px;
+	background-color: $btn_color;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+	&:hover,&:active {
+		background-color: $Black_35;
+	}
+}

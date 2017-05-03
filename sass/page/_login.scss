@@ -1,0 +1,67 @@
+.login_wrap {
+    text-align: center;
+    h1 {
+        margin-bottom: 0.2em;
+        font-weight: bold;
+    }
+    h3 {
+        margin-bottom: 30px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .login_form {
+        width: 300px;
+        margin: auto;
+        text-align: left;
+        padding: 15px;
+        border-top: 4px solid $Orange;
+        box-shadow: 2px 1px 4px #AAA;
+        h4 {
+            text-align: center;
+            font-weight: 900;
+            font-family: 'Noto Sans', sans-serif;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            line-height: 1.4em;
+        }
+        input {
+            display: block;
+            width: 100%;
+            height: 32px;
+            border: 1px solid #AAA;
+            border-radius: 4px;
+            padding-left: 30px;
+        }
+        input[type="email"] {
+            background: url('../images/icon_mail.png') no-repeat 3px;
+        }
+        input[type="password"] {
+            background: url('../images/icon_password.png') no-repeat 3px;
+        }
+        a {
+            display: block;
+            color: #FF5E45;
+            line-height: 1.6em;
+            margin-bottom: 30px;
+        }
+        .btn_position {
+            width: 100%;
+            >li {
+                display: inline-block;
+            }
+            .btn1 {
+                @include button($Orange,
+                125px);
+                margin-right: 10px;
+                padding: 0;
+            }
+            .btn2 {
+                @include button($Orange,
+                125px);
+                padding: 0;
+            }
+        }
+    }
+}

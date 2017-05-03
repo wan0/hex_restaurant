@@ -1,0 +1,195 @@
+.cart_wrap {
+    margin: auto;
+    max-width: $original_width;
+    //padding: 0 42px;
+    padding: 0 32px;
+    @media (max-width: 768px) {
+        padding: 0 20px;
+    }
+    @media (max-width: 414px) {
+        padding: 0;
+        margin: 0 2%;
+    }
+    .cart_aside {
+        float: left;
+        //width: 220px;
+        width: 200px;
+        h3 {
+            font-size: 20px;
+            margin-bottom: 16px;
+        }
+        li {
+            a {
+                display: block;
+                padding: 10px;
+                border-bottom: 1px solid $Brown;
+                color: $Brown;
+            }
+            a:hover,
+            a:active {
+                background: $Brown;
+                color: white;
+            }
+        }
+        @media (max-width: 414px) {
+            width: 96%;
+            float: none;
+            margin: auto;
+        }
+    }
+    .cart_header {
+        float: right;
+        //width: 700px;
+        width: 740px;
+        margin-bottom: 26px;
+        input[type="text"] {
+            display: block;
+            width: 388px;
+            height: 32px;
+            border: 2px solid $Brown;
+            float: left;
+            padding: 3px 5px;
+            //iphone chrome
+            border-radius: 0;
+        }
+        button {
+            display: block;
+            width: 36px;
+            height: 32px;
+            background: $Brown url(../images/icon_magnifier_glass.png) center center no-repeat;
+            border: none;
+            float: left;
+            cursor: pointer;
+        }
+        ul {
+            float: right;
+            margin-right: 20px;
+            li {
+                float: left;
+                a {
+                    color: $Brown;
+                    display: block;
+                }
+                img {
+                    padding-left: 18px;
+                }
+            }
+            li.checkout {
+                padding: 8px 0;
+                a {
+                    padding: 0 15px;
+                    border-right: 1px solid $Brown;
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            width: 508px;
+            input[type="text"] {
+                width: 250px;
+            }
+        }
+        @media (max-width: 414px) {
+            float: none;
+            width: 96%;
+            margin: auto;
+            .search {
+                max-width: 100%;
+                margin: 20px auto;
+                input[type="text"] {
+                    width: 85%;
+                }
+                @include clearfix;
+            }
+        }
+        @include clearfix;
+    }
+    .cart_content {
+        float: right;
+        //width: 700px;
+        width: 753px;
+        ul {
+            li {
+                width: 240px;
+                //height: 280px;
+                //讓內容自動伸縮
+                height: auto;
+                float: left;
+                box-shadow: 2px 2px 3px #AAA;
+                margin-left: 10.666px;
+                margin-bottom: 15px;
+                text-align: center;
+                position: relative;
+                img {
+                    margin-bottom: 10px;
+                }
+                h3,
+                h5 {
+                    line-height: 1.4em;
+                }
+                hr {
+                    border-top: 1px solid $Brown;
+                    width: 90px;
+                    margin-bottom: 20px;
+                }
+                h3.product_price {
+                    margin-bottom: 16px;
+                    font-family: Roboto;
+                    font-weight: light;
+                }
+                button.add_to_cart {
+                    width: 90%;
+                    height: 28px;
+                    border: 2px solid #FF5E45;
+                    border-radius: 4px;
+                    background: $White url(../images/icon_cart_2.png) 50px center no-repeat;
+                    color: #FF5E45;
+                    cursor: pointer;
+                    margin-bottom: 20px;
+                }
+                .hot {
+                    width: 80px;
+                    height: 80px;
+                    position: absolute;
+                    top: -5px;
+                    right: -5px;
+                    background: url(../images/icon_hot.png) center center no-repeat;
+                    background-size: 80px 80px;
+                    z-index: 1;
+                }
+                .favorite {
+                    width: 34px;
+                    height: 34px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: url(../images/icon_heart.png) center center no-repeat;
+                    z-index: 1;
+                    border: none;
+                    cursor: pointer;
+                }
+                .favorite:hover,
+                .favorite:active {
+                    background-image: url(../images/icon_heart_full.png);
+                }
+            }
+        }
+        @media (max-width: 768px) {
+            width: 508px;
+        }
+        //調整寬度
+        @media (max-width: 414px) {
+            float: none;
+            width: 98%;
+            margin: auto;
+            ul {
+                width: 100%;
+                li {
+                    float: none;
+                    width: 300px;
+                    margin: 15px auto;
+                }
+            }
+        }
+    }
+    @include clearfix;
+}
